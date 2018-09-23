@@ -7,7 +7,7 @@ def gitHubReader(user):
     for repository in repositories:
         numcommits = countCommits(repository['url'] + '/commits')
         repository['num_commits'] = numcommits
-        print("Repo: " + repository['name'] + " Number of commits: " + str(numcommits))
+        print("Repo: " + repository['name'] + " Number of commits: " + str(repository['num_commits']))
 
 def countCommits(commitsUrl):
     r = requests.get(commitsUrl)
