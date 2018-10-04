@@ -10,7 +10,7 @@ from GitHubApi import gitHubReader
 class TestGitHubApi(unittest.TestCase):
 
     @patch('requests.get')
-    def testNumCommits(injectedMock, self):
+    def test_num_commits(injectedMock):
         commit_count = gitHubReader('XiliferVinine')
         results = [Mock(), Mock(), Mock()]
         results[0].json.return_value = json.loads('[ { "name" : "GitHubApi265" },  { "name" : "Triangle265" } ]')
